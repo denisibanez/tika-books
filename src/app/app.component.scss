@@ -1,0 +1,190 @@
+
+
+body {
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  font-size: 16px;
+  display: block;
+}
+
+.header-wrapper {
+  height: 156px;
+  background: #F5F5F5 0% 0% no-repeat padding-box;
+  opacity: 1;
+
+  .logo {
+    padding: 15px;
+  }
+
+  .header-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+
+    li {
+      padding: 50px 15px;
+
+      .insta {
+        background-color: #F339A1;
+        width: 50px;
+        height: 50px;
+        border-radius:50%;
+        padding: 0;
+
+        img {
+          position: relative;
+          left: 10px;
+          top: 2px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        text-align: left;
+        font-size: 26px;
+        letter-spacing: 0px;
+        color: #48D2FE;
+        opacity: 1;
+        font-weight: bold;
+
+        &:hover {
+          color: #F339A1;
+        }
+      }
+    }
+  }
+}
+
+.banner-primary {
+  background-image: url('../assets/images/iStock-1126384502.png');
+  height: 924px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  border: none;
+
+  .banner-primary--wrapper {
+    margin: 160px 50px;
+
+    h1 {
+      text-align: left;
+      font-size: 96px;
+      letter-spacing: 0px;
+      color: #FFEE65;
+      opacity: 1;
+    }
+
+    p {
+      text-align: left;
+      font-size: 42px;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+      margin: 50px 0;
+    }
+
+    button {
+      background: #F339A1 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 58px;
+      opacity: 1;
+      min-width: 480px;
+      height: 116px;
+      color: #ffffff;
+      font-size: 46px;
+    }
+  }
+}
+
+.background-gradient {
+  background: transparent linear-gradient(180deg, #FFFFFFEB 0%, #FFF49A 20%, #48D2FE 35%, #48D2FE 43%, #48D2FE 56%, #F7F3D7 81%, #FFF7B5 92%, #F339A1 100%) 0% 0% no-repeat padding-box;
+  opacity: 0.9;
+  width: 100%;
+  min-height: 4000px;
+  z-index: 9999;
+
+  .about-us {
+    h2 {
+      color: #F339A1;
+      font-size: 48px;
+      margin-top: 100px;
+    }
+
+    p {
+      text-align: left;
+      font-size:42px;
+      letter-spacing: 1.89px;
+      color: #4E4E4E;
+      opacity: 1;
+      margin-top: 30px;
+    }
+  }
+
+  .how-works {
+    margin-left: 200px;
+    margin-top: 500px;
+    position: relative;
+
+    .how-works--left {
+      &:before {
+        content: '';
+        background-image: url('../assets/images/Artboard–17.png');
+        display: block;
+        width: 322px;
+        height: 322px;
+        position: absolute;
+        top: -400px;
+        left: -150px;
+      }
+  
+      h2 {
+        text-align: left;
+        font-size: 46px;
+        letter-spacing: 0px;
+        color: #F339A1;
+        opacity: 1;
+      }
+  
+      p {
+        text-align: left;
+        font-size:38px;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        margin: 35px 0;
+  
+        small {
+          text-align: left;
+          font-size: 36px;
+          font-weight: lighter;
+          letter-spacing: 0px;
+          color: #FFFFFF;
+          opacity: 1;
+        }
+      }
+  
+      ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+  
+        li {
+          padding: 0 15px;
+        }
+      }
+    }
+
+    .how-works--right {
+      text-align: center;
+
+      margin-top: 150px;
+    }
+  }
+}
