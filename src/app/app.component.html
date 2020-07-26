@@ -1,29 +1,41 @@
 <div class="container-fluid">
   <!-- Header -->
   <div class="row header-wrapper">
-    <div class="col-xl-4">
+    <div class="col-lg-2 col-xl-4">
       <p class="text-center logo">Logo</p>
     </div>
 
-    <div class="col-xl-8">
-      <ul class="header-menu">
-        <li><a href="">Home</a></li>
-        <li><a href="">Sobre nós</a></li>
-        <li><a href="">Como funciona</a></li>
-        <li><a href="">Contato</a></li>
-        <li>
-          <a href="">
-            <img src="../assets/images/facebook.svg" alt="">
-          </a>
-        </li>
-        <li>
-          <div class="insta"> 
-            <a href=""> 
-              <img src="../assets/images/instagram.svg" alt="">
-            </a>
-          </div>
-        </li>
-      </ul>
+    <div class="col-lg-10 col-xl-8">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <ul
+            id="menu"
+            class="header-menu d-flex justify-content-end">
+            <li><a href="">Home</a></li>
+            <li><a href="">Sobre nós</a></li>
+            <li><a href="">Como funciona</a></li>
+            <li><a href="">Contato</a></li>
+            <li class="d-none d-lg-block">
+              <a href="">
+                <img src="../assets/images/facebook.svg" alt="">
+              </a>
+            </li>
+            <li class="d-none d-lg-block">
+              <div class="insta"> 
+                <a href=""> 
+                  <img src="../assets/images/instagram.svg" alt="">
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </div>
   <!-- /Header -->
@@ -52,11 +64,11 @@
 <div class="container-fluid background-gradient">
   <!-- About us-->
   <div class="row about-us">
-    <div class="col-xl-5">
+    <div class="col-lg-12 col-xl-4">
       <p class="logo text-center">Logo</p>
     </div>
 
-    <div class="col-xl-7">
+    <div class="col-lg-12 col-xl-8">
       <h2>Sobre nós</h2>
 
       <p>
@@ -69,7 +81,7 @@
 
   <!-- How Works-->
   <div class="row how-works">
-    <div class="col-xl-6">
+    <div class="col-12 col-xl-8">
       <div class="how-works--left">
         <h2>Como funciona</h2>
 
@@ -100,11 +112,154 @@
       </div>
     </div>
 
-    <div class="col-xl-6">
+    <div class="col-12 col-xl-4">
       <div class="how-works--right">
-        <img src="../assets/images/Artboard–13.png" alt="">
+        <img src="../assets/images/Artboard–13.png" alt="" class="resp-img">
       </div>
     </div>
   </div>
   <!-- /How Works-->
+
+  <!--Slider-->
+  <div class="row">
+    <div class="col-xl-12 gallery-wrapper">
+      <!-- Flickity HTML init -->
+      <div class="gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell" *ngFor="let item of items" [class]="item.class">
+          <img [src]="item.url" alt="" [class]="item.class">
+        </div>
+      </div>
+
+      <div class="gallery-wrapper--text">
+        <h2>Lendo seu livro</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      </div>
+    </div>
+  </div>
+  <!--/Slider-->
+
+  <!--Contact-->
+  <div class="row contact-wrapper">
+    <div class="col-xl-12">
+      <div class="container"> 
+        <!--Contact-->
+
+        <div class="row">
+          <div class="col-xl-12">
+            <h2>Contato</h2>
+
+            <p>Preencha o formulário abaixo ou nos envie um e-mail diretamente para: contato@tikabooks.com</p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-xl-12">
+            <form
+            novalidate>
+      
+            <div class="row">
+              <div class="col-12 col-xl-6">
+                <div class="form-group">
+                  <label for="name">Nome completo</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    aria-describedby="name"
+                    formControlName="name">
+                </div>
+              </div>
+      
+              <div class="col-12 col-xl-6">
+                <div class="form-group">
+                  <label for="lastName">e-mail</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="email"
+                    formControlName="email">
+                </div>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-12">
+                <label for="message">Mensagem</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  formControlName="message"></textarea>
+                </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-xl-12 d-flex justify-content-end buttons">
+      
+                <button
+                  class="clear">
+                  Limpar
+                </button>
+                
+                <button
+                  type="submit"
+                  class="submit">
+                    Enviar
+                </button>
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+        <!--/Contact-->
+      </div>
+    </div>
+  </div>
+  <!--/Contact-->
+</div>
+
+<div class="container-fluid">
+  <!--Footer-->
+  <div class="row footer-wrapper">
+    <div class="col-md-12 col-lg-2 col-xl-4">
+      <p class="logo">logo</p>
+    </div>
+
+    <div class="col-md-12 col-lg-10 col-xl-8">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Sobre nós</a></li>
+        <li><a href="">Como funciona</a></li>
+        <li><a href="">Contato</a></li>
+        <li>
+          <a href="">
+            <img src="../assets/images/facebook-1.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <div class="insta"> 
+            <a href=""> 
+              <img src="../assets/images/instagram-1.svg" alt="">
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="terms d-flex justify-content-end">
+        <li>
+          <a href="">
+            Termos de Uso
+          </a>
+        </li>
+        <li>
+          <a href="">
+            Política de Privacidade
+          </a>
+        </li>
+        </ul>
+    </div>
+  </div>
+  <!--/Footer-->
 </div>

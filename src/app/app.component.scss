@@ -1,4 +1,4 @@
-
+@import 'https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css';
 
 body {
   text-align: left;
@@ -23,6 +23,7 @@ body {
     list-style: none;
     display: flex;
     margin: 0;
+    padding: 0;
 
     li {
       padding: 50px 15px;
@@ -103,10 +104,10 @@ body {
 }
 
 .background-gradient {
-  background: transparent linear-gradient(180deg, #FFFFFFEB 0%, #FFF49A 20%, #48D2FE 35%, #48D2FE 43%, #48D2FE 56%, #F7F3D7 81%, #FFF7B5 92%, #F339A1 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #FFFFFFEB 0%, #FFF49A 20%, #48D2FE 35%, #48D2FE 43%, #48D2FE 56%, #F7F3D7 81%, #FFF7B5 92%, #F339A1 100%) 0 0 no-repeat padding-box;
   opacity: 0.9;
   width: 100%;
-  min-height: 4000px;
+  min-height: 430vh;
   z-index: 9999;
 
   .about-us {
@@ -123,6 +124,7 @@ body {
       color: #4E4E4E;
       opacity: 1;
       margin-top: 30px;
+      padding: 0 150px 0 0;
     }
   }
 
@@ -186,5 +188,538 @@ body {
 
       margin-top: 150px;
     }
+  
+  }
+
+  .gallery-wrapper {
+    .gallery {
+      margin-top: 400px;
+    }
+    
+    .gallery-cell {
+      width: 25%;
+      height:600px;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+      &.is-selected {
+        width: 28%;
+        img {
+          width: 70%;
+          transition: 0.5s ease-in-out;
+        }
+      }
+
+      img {
+        width: 55%;
+      }
+    }
+    
+    .gallery-wrapper--text {
+      width: 70%;
+      margin: 50px auto;
+      h2 {
+        text-align: center;
+        font-size:33px;
+        letter-spacing: 0px;
+        color: #F339A1;
+        opacity: 1;
+      }
+    
+      p {
+        text-align: center;
+        font-size:28px;
+        letter-spacing: 0px;
+        color: #4E4E4E;
+        opacity: 1;
+      }
+    }
+  }
+
+  .contact-wrapper {
+    margin: 500px 0 100px 0;
+    position: relative;
+
+    &:before {
+      content: '';
+      background-image: url('../assets/images/Artboard–21.png');
+      display: block;
+      width: 328px;
+      height: 328px;
+      position: relative;
+      top: 100px;
+    }
+
+    &:after {
+      content: '';
+      background-image: url('../assets/images/Artboard–12.png');
+      display: block;
+      width: 380px;
+      height: 365px;
+      position: absolute;
+      right: 0;
+      bottom: -300px;
+    }
+
+    h2 {
+      text-align: left;
+      font-size: 33px;
+      letter-spacing: 0px;
+      color: #F339A1;
+      opacity: 1;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      font-size:21px;
+      letter-spacing: 0px;
+      color: #4E4E4E;
+      opacity: 1;
+      padding: 30px 300px;
+    }
+
+    input {
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border-radius: 30px;
+      opacity: 1;
+      border: 0;
+      height: 61px;
+    }
+    
+    label {
+      text-align: left;
+      font: Regular 20px/24px Cloudy With a Chance of Love;
+      letter-spacing: 0px;
+      color: #FFF06E;
+      opacity: 1;
+    }
+    
+    textarea {
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border-radius: 30px;
+      opacity: 1;
+      border: 0;
+      height: 221px
+    }
+
+    .buttons {
+      margin:30px 0;
+
+      .submit {
+        background: #48D2FE 0% 0% no-repeat padding-box;
+        border-radius: 31px;
+        opacity: 1;
+        min-width: 192px;
+        text-align: center;
+        font-size: 22px;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        height: 61px;
+      }
+  
+      .clear {
+        text-align: right;
+        font-size: 18px;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        background: transparent;
+        border: 0;
+        margin-right: 25px;
+      }
+    }
   }
 }
+
+.footer-wrapper {
+  height: 146px;
+  background: #4E4E4E 0% 0% no-repeat padding-box;
+  opacity: 1;
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+
+    &.terms {
+      margin-right: 180px;
+      li {
+        padding: 0 15px;
+        a {
+          text-align: left;
+          font-size: 16px;
+          letter-spacing: 0px;
+          color: #939393;
+          opacity: 1;
+        }
+      }
+    }
+
+    li {
+      padding: 50px 15px 0;
+
+      .insta {
+        background-color: #FFFFFF;
+        width: 50px;
+        height: 50px;
+        border-radius:50%;
+        padding: 0;
+
+        img {
+          position: relative;
+          left: 10px;
+          top: 2px;
+        }
+
+        svg {
+          color: red;
+          fill:red;
+        }
+      }
+
+      a {
+        text-align: left;
+        font-size: 26px;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+
+        &:hover {
+          color: #F339A1;
+        }
+      }
+    }
+  }
+}
+
+#menuToggle {
+  input {
+    display: none;
+  }
+}
+
+@media(max-width:1600px) {
+  .background-gradient {
+    .gallery-wrapper {
+    
+      .gallery-cell {
+        &.is-selected {
+          width: 28%;
+          img {
+            width: 85%;
+            transition: 0.5s ease-in-out;
+          }
+        }
+  
+        img {
+          width: 70%;
+        }
+      }
+    }
+  }  
+}
+
+@media(max-width:1200px) {
+  .about-us {
+    p, h2 {
+      margin-left: 200px;
+    }
+  }
+
+  .background-gradient {
+    .contact-wrapper {
+       p {
+        padding: 50px 0;
+       }
+    }
+  } 
+}
+
+@media(max-width:1024px) {
+  .background-gradient {
+    .contact-wrapper {
+      margin: 500px 0 0;
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        top: 0;
+      }
+    }
+  }
+
+  .footer-wrapper {
+    height: 100%;
+    
+    ul {
+      &.terms {
+        margin: 50px 0;
+      }
+    }
+  }
+}
+
+@media(max-width:991px){
+  .banner-primary { 
+    .banner-primary--wrapper {
+      margin: 100px 0;
+      padding: 0 15px;
+
+      h1, p {
+        font-size: 46px;
+      }
+
+      button {
+        width: 100%;
+        min-width: auto;
+        max-width: 320px;
+        font-size: 22px;
+        height: 50px;
+      }
+    }
+  }
+
+  .background-gradient {
+    .about-us {
+      p,h2  {
+        margin: 0;
+        padding: 30px 30px;
+      }
+    }
+
+    .how-works {
+      margin: 0;
+      padding: 15px;
+
+      .how-works--left {
+        &:before {
+          display: none;
+        } 
+      }      
+    }
+
+    .gallery-wrapper {
+      .gallery-wrapper--text {
+        margin: 0 auto;
+        width: 100%;
+        padding: 30px;
+      }
+    }
+  }
+
+  .footer-wrapper {
+    height: 100%;
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      &.terms {
+        margin: 50px 0;
+      }
+
+      li {
+        width: 100%;
+         a {
+           font-size: 16px;
+         }
+      }
+    }
+  }
+
+
+ 
+  #menuToggle
+{
+  display: block;
+  position: relative;
+ 
+  z-index: 999999;
+  top:-40px;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #ffffff;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color:#F339A1;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  z-index: 999999 !important;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #232323;
+  border-radius: 3px;
+  
+  z-index: 99999;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ffffff;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  margin: -100px 0 0 -50px;
+  width: 100%;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #F339A1 0% 0% no-repeat padding-box;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  flex-wrap: wrap;
+  display: flex;
+}
+
+#menu li
+{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+}
+
+@media(max-width:767px) {
+  .resp-img {
+    width: 100%;
+  }
+  .banner-primary { 
+    .banner-primary--wrapper {
+      h1, p {
+        font-size: 26px;
+      }
+
+      button {
+        width: 100%;
+        min-width: auto;
+        max-width: 320px;
+        font-size: 22px;
+        height: 50px;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 26px !important;
+    text-align: left !important;
+  }
+
+  p, small {
+    font-size: 22px !important;
+    text-align: left !important;
+  }
+}
+
+
+
+
+
+
+
+
+
