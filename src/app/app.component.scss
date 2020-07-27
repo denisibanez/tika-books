@@ -16,7 +16,8 @@ body {
   opacity: 1;
 
   .logo {
-    padding: 15px;
+    padding: 20px;
+    text-align: center !important;
   }
 
   .header-menu {
@@ -61,6 +62,7 @@ body {
 
 .banner-primary {
   background-image: url('../assets/images/iStock-1126384502.png');
+  background-origin: padding-box;
   height: 924px;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -69,9 +71,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   border: none;
+  background-size: 1920px;
 
   .banner-primary--wrapper {
-    margin: 160px 50px;
+    margin: 160px 50px 0;
 
     h1 {
       text-align: left;
@@ -103,14 +106,30 @@ body {
   }
 }
 
-.background-gradient {
-  background: transparent linear-gradient(180deg, #FFFFFFEB 0%, #FFF49A 20%, #48D2FE 35%, #48D2FE 43%, #48D2FE 56%, #F7F3D7 81%, #FFF7B5 92%, #F339A1 100%) 0 0 no-repeat padding-box;
-  opacity: 0.9;
+.background {
+  background-image: url('../assets/images/background.png');
+  background-origin: padding-box;;
+  opacity: 1;
   width: 100%;
-  min-height: 430vh;
-  z-index: 9999;
+  height: 100%;
+  background-repeat: no-repeat;
+  min-height: 365vh;
 
   .about-us {
+    margin-bottom: 100px;
+    .logo {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto;
+        p {
+        padding: 0;
+        }
+    }
+
     h2 {
       color: #F339A1;
       font-size: 48px;
@@ -130,7 +149,8 @@ body {
 
   .how-works {
     margin-left: 200px;
-    margin-top: 500px;
+    margin-top: 400px;
+    margin-bottom: 100px;
     position: relative;
 
     .how-works--left {
@@ -141,7 +161,7 @@ body {
         width: 322px;
         height: 322px;
         position: absolute;
-        top: -400px;
+        top: -300px;
         left: -150px;
       }
   
@@ -193,7 +213,8 @@ body {
 
   .gallery-wrapper {
     .gallery {
-      margin-top: 400px;
+      margin-top: 100px;
+      margin-bottom: 100px;
     }
     
     .gallery-cell {
@@ -241,17 +262,17 @@ body {
   }
 
   .contact-wrapper {
-    margin: 500px 0 100px 0;
+    margin-top: -350px;
     position: relative;
 
     &:before {
       content: '';
       background-image: url('../assets/images/Artboard–21.png');
       display: block;
-      width: 328px;
-      height: 328px;
+      width: 610px;
+      height: 506px;
       position: relative;
-      top: 100px;
+      top: 300px;
     }
 
     &:after {
@@ -338,7 +359,8 @@ body {
 }
 
 .footer-wrapper {
-  height: 146px;
+  min-height: 146px;
+  height: 100%;
   background: #4E4E4E 0% 0% no-repeat padding-box;
   opacity: 1;
 
@@ -404,8 +426,20 @@ body {
   }
 }
 
-@media(max-width:1600px) {
-  .background-gradient {
+@media(max-width:1650px) {
+  .background {
+    .about-us {
+      p {
+        padding: 0;
+      }
+    }
+    
+    .how-works {
+      margin-left: -15px;
+      margin-top: 300px;
+    }
+
+
     .gallery-wrapper {
     
       .gallery-cell {
@@ -425,44 +459,105 @@ body {
   }  
 }
 
-@media(max-width:1200px) {
-  .about-us {
-    p, h2 {
-      margin-left: 200px;
+@media(max-width:1250px) {
+
+  .background {
+    min-height: 330vh;
+
+    .contact-wrapper {
+      margin-top: 300px;
+      &:after, &:before {
+        display: none !important;
+      }
+    }
+
+    .gallery-wrapper {
+      margin-top: 100px;
+
+      .gallery {
+        margin: 0;
+      }
+
+      .gallery-wrapper--text {
+        margin: 0 auto;
+      }
     }
   }
+}
 
-  .background-gradient {
+@media(max-width:1200px) {
+  .background {
+    background-repeat: repeat-y;
     .contact-wrapper {
        p {
         padding: 50px 0;
        }
+
+       h2 {
+         color: #ffffff;
+       }
     }
   } 
+
+  .footer-wrapper {
+    ul {
+      float: right;
+    }
+  }
 }
 
 @media(max-width:1024px) {
-  .background-gradient {
+  .background {
     .contact-wrapper {
-      margin: 500px 0 0;
-      &:after {
-        display: none;
+      margin-top: 100px;
+      
+      h2 {
+        color: #F339A1;
       }
 
       &:before {
         top: 0;
+        display: none;
+      }
+    }
+    
+    .gallery-wrapper {
+      margin-top: 100px;
+      .gallery {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+
+    .how-works {
+      .how-works--right {
+        display: none;
       }
     }
   }
 
   .footer-wrapper {
     height: 100%;
+
+    .logo {
+      padding: 25px;
+      display: flex;
+    }
     
     ul {
       &.terms {
         margin: 50px 0;
       }
     }
+  }
+
+  p {
+    font-size: 30px !important;
+  }
+
+  h2 {
+    font-size: 46px !important;
   }
 }
 
@@ -486,7 +581,7 @@ body {
     }
   }
 
-  .background-gradient {
+  .background {
     .about-us {
       p,h2  {
         margin: 0;
@@ -544,7 +639,7 @@ body {
   position: relative;
  
   z-index: 999999;
-  top:-40px;
+  top:-95px;
   
   -webkit-user-select: none;
   user-select: none;
