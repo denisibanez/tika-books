@@ -129,15 +129,16 @@
         <!-- Flickity HTML init -->
         <div class="gallery js-flickity"
           data-flickity-options='{ "wrapAround": true }'>
-          <div class="gallery-cell" *ngFor="let item of items" [class]="item.class">
+          <div #gallery  (domChange)="onDomChange($event)" class="gallery-cell" [attr.ref]="'index-'+i" *ngFor="let item of items; let i = index" [class]="item.class">
             <img [src]="item.url" alt="" [class]="item.class">
           </div>
         </div>
-  
+
         <div class="gallery-wrapper--text">
-          <h2>Lendo seu livro</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          <h2>{{ msg.title }}</h2>
+          <p>{{ msg.msg }}</p>
         </div>
+
       </div>
     </div>
     <!--/Slider-->
@@ -176,7 +177,7 @@
         
                 <div class="col-12 col-xl-6">
                   <div class="form-group">
-                    <label for="lastName">e-mail</label>
+                    <label for="lastName">E-mail</label>
                     <input
                       type="text"
                       class="form-control"
@@ -247,12 +248,14 @@
         <li>
           <div class="insta"> 
             <a href=""> 
-              <img src="../assets/images/instagram-1.svg" alt="">
+              <img src="../assets/images/InstagramBranco.svg" alt="">
             </a>
           </div>
         </li>
       </ul>
+    </div>
 
+    <div class="col-md-12">
       <ul class="terms d-flex justify-content-end">
         <li>
           <a href="">

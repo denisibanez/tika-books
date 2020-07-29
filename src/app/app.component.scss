@@ -1,8 +1,23 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css';
 
+@font-face {
+  font-family: "Raleway-bold";
+  src: url('../assets/fonts/Raleway-Bold.ttf') format('tff');
+}
+
+@font-face {
+  font-family: "Raleway-regular";
+  src: url('../assets/fonts/Raleway-Regular.ttf') format("ttf");
+}
+
+@font-face {
+  font-family: "Cloudy";
+  src: url('../assets/fonts/Cloudy-With-a-Chance-of-Love.ttf') format("ttf");
+}
+
 body {
   text-align: left;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway-regular', sans-serif !important;
   font-size: 16px;
   font-weight: normal;
   letter-spacing: 0px;
@@ -199,6 +214,10 @@ body {
   
         li {
           padding: 0 15px;
+
+          &:first-child {
+            padding-left: 0;
+          }
         }
       }
     }
@@ -242,7 +261,7 @@ body {
     
     .gallery-wrapper--text {
       width: 70%;
-      margin: 50px auto;
+      margin: 0 auto;
       h2 {
         text-align: center;
         font-size:33px;
@@ -253,9 +272,9 @@ body {
     
       p {
         text-align: center;
-        font-size:28px;
         letter-spacing: 0px;
         color: #4E4E4E;
+        font-size: 28px;
         opacity: 1;
       }
     }
@@ -264,6 +283,7 @@ body {
   .contact-wrapper {
     margin-top: -350px;
     position: relative;
+    height: 1600px;
 
     &:before {
       content: '';
@@ -283,7 +303,7 @@ body {
       height: 365px;
       position: absolute;
       right: 0;
-      bottom: -300px;
+      bottom: 0;
     }
 
     h2 {
@@ -364,10 +384,21 @@ body {
   background: #4E4E4E 0% 0% no-repeat padding-box;
   opacity: 1;
 
+  .logo {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    min-height: 146px;
+  }
+
   ul {
     list-style: none;
     display: flex;
     margin: 0;
+    float: right;
 
     &.terms {
       margin-right: 180px;
@@ -387,16 +418,9 @@ body {
       padding: 50px 15px 0;
 
       .insta {
-        background-color: #FFFFFF;
-        width: 50px;
-        height: 50px;
-        border-radius:50%;
-        padding: 0;
-
         img {
           position: relative;
-          left: 10px;
-          top: 2px;
+          top: -4px;
         }
 
         svg {
@@ -423,6 +447,16 @@ body {
 #menuToggle {
   input {
     display: none;
+  }
+}
+
+@media(max-width:1792px) {
+  .background {
+    .contact-wrapper {
+      &:after {
+        bottom: -100px;
+      }
+    }
   }
 }
 
@@ -466,8 +500,13 @@ body {
 
     .contact-wrapper {
       margin-top: 300px;
-      &:after, &:before {
+      height: 1000px;
+      &:before {
         display: none !important;
+      }
+
+      &:after {
+        bottom: -50px;
       }
     }
 
@@ -509,14 +548,14 @@ body {
 @media(max-width:1024px) {
   .background {
     .contact-wrapper {
-      margin-top: 100px;
+      margin-top: 500px;
+      height: 100%;
       
       h2 {
         color: #F339A1;
       }
 
-      &:before {
-        top: 0;
+      &:before, &:after {
         display: none;
       }
     }
@@ -534,7 +573,14 @@ body {
       .how-works--right {
         display: none;
       }
-    }
+
+      .how-works--left {
+        &:before {
+          display: none;
+        }
+      }
+    } 
+      
   }
 
   .footer-wrapper {
@@ -546,8 +592,21 @@ body {
     }
     
     ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
       &.terms {
         margin: 50px 0;
+      }
+
+      li {
+        width: 100%;
+         a {
+           font-size: 16px;
+         }
       }
     }
   }
@@ -609,30 +668,7 @@ body {
     }
   }
 
-  .footer-wrapper {
-    height: 100%;
-    
-    ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
 
-      &.terms {
-        margin: 50px 0;
-      }
-
-      li {
-        width: 100%;
-         a {
-           font-size: 16px;
-         }
-      }
-    }
-  }
-
-
- 
   #menuToggle
 {
   display: block;
@@ -779,7 +815,7 @@ body {
 }
 }
 
-@media(max-width:767px) {
+@media(max-width:768px) {
   .resp-img {
     width: 100%;
   }
@@ -787,6 +823,10 @@ body {
     .banner-primary--wrapper {
       h1, p {
         font-size: 26px;
+      }
+
+      p {
+        color: #ffffff !important;
       }
 
       button {
@@ -800,13 +840,38 @@ body {
   }
 
   h2 {
-    font-size: 26px !important;
+    font-size: 32px !important;
     text-align: left !important;
+    color: initial;
   }
 
   p, small {
-    font-size: 22px !important;
+    font-size: 26px !important;
     text-align: left !important;
+    color: initial !important;
+  }
+
+  .footer-wrapper {
+    ul {
+      width: 100%;
+    }
+  }
+
+  .background {
+    .contact-wrapper {
+      label {
+        color: initial;
+      }
+    }
+  }
+  
+}
+
+@media(max-width:500px) {
+  .background {
+    .contact-wrapper {
+      margin-top: 200px;
+    }
   }
 }
 

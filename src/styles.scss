@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css';
+
+.flickity-page-dots {
+  display: none;
+}
+
+.flickity-prev-next-button {
+  background: transparent !important;
+  height: 80px !important;
+  width: 80px !important;
+  opacity: 0.6;
+}
+
+.flickity-prev-next-button  .arrow {
+    fill: #ffffff !important;
+    font-size:50px
+  }
+
+@font-face {
+  font-family: "Raleway-bold";
+  src: url('./assets/fonts/Raleway-Bold.ttf') format('tff');
+}
+
+@font-face {
+  font-family: "Raleway-regular";
+  src: url('/assets/fonts/Raleway-Regular.ttf') format("ttf");
+}
+
+@font-face {
+  font-family: "Cloudy";
+  src: url('/assets/fonts/Cloudy-With-a-Chance-of-Love.ttf') format("ttf");
+}
+
+body {
+  text-align: left;
+  font-family: 'Raleway-regular' !important;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  font-size: 16px;
+  display: block;
+}
+
+a, h2 {
+  font-family: 'Cloudy' !important;
+}
+
+button {
+  border: 0;
+}
