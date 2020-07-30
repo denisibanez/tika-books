@@ -1,20 +1,5 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css';
 
-@font-face {
-  font-family: "Raleway-bold";
-  src: url('../assets/fonts/Raleway-Bold.ttf') format('tff');
-}
-
-@font-face {
-  font-family: "Raleway-regular";
-  src: url('../assets/fonts/Raleway-Regular.ttf') format("ttf");
-}
-
-@font-face {
-  font-family: "Cloudy";
-  src: url('../assets/fonts/Cloudy-With-a-Chance-of-Love.ttf') format("ttf");
-}
-
 body {
   text-align: left;
   font-family: 'Raleway-regular', sans-serif !important;
@@ -292,7 +277,7 @@ body {
       width: 610px;
       height: 506px;
       position: relative;
-      top: 300px;
+      top: 500px;
     }
 
     &:after {
@@ -454,8 +439,13 @@ body {
 @media(max-width:1792px) {
   .background {
     .contact-wrapper {
+      margin-top: -500px;
       &:after {
         bottom: -100px;
+      }
+
+      &:before {
+        top: 500px;
       }
     }
   }

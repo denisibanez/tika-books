@@ -35,32 +35,32 @@ export class AppComponent implements OnInit {
       switch (ref) {
         case 'index-0':
           this.msg = { 
-            title: 'title 1',
-            msg: 'msg 1'
+            title: 'Lendo seu livro 1',
+            msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
           }
           break;
         case 'index-1':
           this.msg = { 
-            title: 'title 2',
-            msg: 'msg 2'
+            title: 'Lendo seu livro 2',
+            msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
           }
           break;
         case 'index-2':
           this.msg = { 
-            title: 'title 3',
-            msg: 'msg 3'
+            title: 'Lendo seu livro 3',
+    msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
           }
             break;
         case 'index-3':
           this.msg = { 
-            title: 'title 4',
-            msg: 'msg 4'
+            title: 'Lendo seu livro 4',
+            msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
           }
           break;
         case 'index-4':
           this.msg = { 
-            title: 'title 5',
-            msg: 'msg 5'
+            title: 'Lendo seu livro 5',
+            msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
           }
           break;          
       }
