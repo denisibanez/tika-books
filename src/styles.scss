@@ -6,7 +6,7 @@
 }
 
 .flickity-prev-next-button {
-  background: transparent !important;
+  background: #F339A1 !important;
   height: 80px !important;
   width: 80px !important;
   opacity: 0.6;
@@ -22,7 +22,11 @@ button {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   text-align: left;
   font-family: 'Raleway', sans-serif;
@@ -40,8 +44,15 @@ body {
   src: local('Cloudy-With-a-Chance-of-Love'), url('./fonts/Cloudy-With-a-Chance-of-Love.woff') format('woff');
   }
 
-  a, h2 {
+  a, h2, label {
     font-family: 'Cloudy With a Chance of Love' !important;
+  }
+
+  @media(max-width:560px) {
+    .flickity-prev-next-button {
+      height: 50px !important;
+      width: 50px !important;
+    }
   }
 
 
