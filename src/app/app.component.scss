@@ -874,13 +874,17 @@ body {
 
     .contact-wrapper {
       p {
-        font-size: 18px;
+        font-size: 18px !important;
       }
     }
 
     .about-us {
       img {
         max-width: 250px;
+      }
+
+      p {
+        font-size: 16px !important;
       }
     }
   }
