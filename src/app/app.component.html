@@ -9,28 +9,27 @@
 
     <div class="col-lg-10 col-xl-8">
       <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          
-          <span></span>
-          <span></span>
-          <span></span>
-          
+        <div class="menuToggle" [class]="{ 'active' : display }" (click)="setDisplay(!display)" >          
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>  
+        <div class="menuToggle" *ngIf="display" [class]="{ 'active' : display }">  
           <ul
             id="menu"
-            class="header-menu d-flex justify-content-end">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#aboutUs">Sobre nós</a></li>
-            <li><a href="#howWorks">Como funciona</a></li>
-            <li><a href="#contact">Contato</a></li>
-            <li class="d-none d-lg-block">
-              <a href="">
+            class="ul header-menu d-flex justify-content-end">
+            <li><a href="#home" (click)="setDisplay(false)">Home</a></li>
+            <li><a href="#aboutUs" (click)="setDisplay(false)">Sobre nós</a></li>
+            <li><a href="#howWorks" (click)="setDisplay(false)">Como funciona</a></li>
+            <li><a href="#contact" (click)="setDisplay(false)">Contato</a></li>
+            <li class="d-none d-lg-block" >
+              <a href="" (click)="setDisplay(false)">
                 <img src="../assets/images/facebook.svg" alt="">
               </a>
             </li>
             <li class="d-none d-lg-block">
               <div class="insta"> 
-                <a href=""> 
+                <a href="" (click)="setDisplay(false)"> 
                   <img src="../assets/images/InstagramSVG.svg" alt="">
                 </a>
               </div>

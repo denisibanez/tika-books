@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   constructor() {}
   
   public title = 'tika-books-asteria';
+  public display = false;
   public msg = {
     title: 'Lendo seu livro',
     msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.'
@@ -65,6 +66,10 @@ export class AppComponent implements OnInit {
           break;          
       }
     }
+  }
+
+  setDisplay(param): void {
+    this.display = param
   }
 }
 
