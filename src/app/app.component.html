@@ -9,7 +9,7 @@
 
     <div class="col-lg-10 col-xl-8">
       <nav role="navigation">
-        <div class="menuToggle" [class]="{ 'active' : display }" (click)="setDisplay(!display)" >          
+        <div class="menuToggle d-none d-md-block" [class]="{ 'active' : display }">          
             <span></span>
             <span></span>
             <span></span>
@@ -17,10 +17,10 @@
             <ul
             id="menu"
             class="header-menu d-flex justify-content-end">
-            <li><a href="">Home</a></li>
-            <li><a href="">Sobre nós</a></li>
-            <li><a href="">Como funciona</a></li>
-            <li><a href="">Contato</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutUs">Sobre nós</a></li>
+            <li><a href="#howWorks">Como funciona</a></li>
+            <li><a href="#contact">Contato</a></li>
             <li class="d-none d-lg-block">
               <a href="">
                 <img src="../assets/images/facebook.svg" alt="">
@@ -34,6 +34,11 @@
               </div>
             </li>
           </ul>
+        </div>  
+        <div class="menuToggle d-block d-md-none" [class]="{ 'active' : display }" (click)="setDisplay(!display)" >          
+          <span></span>
+          <span></span>
+          <span></span>
         </div>  
         <div class="menuToggle" *ngIf="display" [class]="{ 'active' : display }">  
           <ul
